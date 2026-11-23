@@ -8,6 +8,8 @@
 
   /* ==== color start ==== */
   --color-cobalt: #5F5FFF;
+  --color-primary: #141778;
+  --nav-hover-linearbg: 97deg, #FF357D 0%, #FF6F33 100%;
   /* ==== color end ==== */
 
   /* ==== responsive screens breakpoints start ==== */
@@ -21,4 +23,24 @@
   --breakpoint-4xl: 1760px;
   --breakpoint-5xl: 1920px;
   /* ==== responsive screens breakpoints end ==== */
+}
+
+.container{
+  max-width: 1106px;
+  margin: 0 auto;
+}
+@media (max-width: 767.99px) {
+  .container{
+    padding: 0 16px;
+  }
+}
+@media (min-width: 768px ) and (max-width: 1153.99px) {
+  .container{
+    padding: 0 24px;
+  }
+}
+@media (min-width: 1154px ) {
+  .container{
+    padding: 0 0;
+  }
 }
