@@ -9,7 +9,9 @@
   /* ==== color start ==== */
   --color-cobalt: #5F5FFF;
   --color-primary: #141778;
-  --color-secondary: #FF5851
+  --color-secondary: #FF5851;
+  --color-orange: #F7931A;
+  --color-gray_1: #AEADAD;
   --nav-hover-linearbg: 97deg, #FF357D 0%, #FF6F33 100%;
   --footer-linearbg: 286deg, #2A2AFF -70.7%, #550096 78.49%;
   /* ==== color end ==== */

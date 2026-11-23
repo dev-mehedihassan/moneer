@@ -1,4 +1,4 @@
-export const footerurl = [
+export const footerUrl = [
     {
         id: 1,
         text: "about us",
@@ -35,4 +35,25 @@ export const footerurl = [
         url: "#",
         isNew: false
     }
+]
+
+export const recentNews = [
+  {
+    id:1,
+    title:"Crypto PR: The good, the bad and the shoddy",
+    url:"#",
+    puslishedDate:"June 10, 2021"
+  },
+  {
+    id:2,
+    title:"How to build an exemplary crypto exchange..",
+    url:"#",
+    puslishedDate:"June 8, 2021"
+  },
+  {
+    id:3,
+    title:"Ethereum’s 1st Hard Fork, Important Updates...",
+    url:"#",
+    puslishedDate:"June 7, 2021"
+  }
 ]
