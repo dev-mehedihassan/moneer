@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@theme {
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-lato: "Lato", sans-serif;
+
+  --color-cobalt: #5F5FFF;
+}
