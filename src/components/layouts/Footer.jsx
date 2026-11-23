@@ -6,12 +6,22 @@ import { Link } from 'react-router-dom'
 import { FaEnvelope, FaMapMarkerAlt, FaChevronRight } from 'react-icons/fa'
 import { IoMdCall } from 'react-icons/io'
 import { footerUrl, recentNews } from '../../dummyData/footerUrl'
+import RecentNewsCard from '../common/RecentNewsCard'
+import doubleUpArrow from '../../assets/svg/double-up-arrow.svg'
 
 const Footer = () => {
+
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
   return (
     <footer className="py-[110px] bg-linear-(--footer-linearbg)">
       <div className="container">
-        <div className="flex ">
+        <div className="flex justify-between">
           <div className="w-[285px]">
             <Image src={logo} alt='logo' />
             <p className='mt-6 text-base font-lato font-normal text-white leading-7'>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin commodo</p>
@@ -57,7 +67,18 @@ const Footer = () => {
               ))}
             </div>
           </div>
+          <div className="w-[440px]">
+            <Heading variant="h3" text="Recent News" className="mt-2 font-montserrat font-bold leading-normal text-white text-2xl" />
+            <div className="mt-[22px] grid grid-cols-1 gap-y-[14px]">
+              {recentNews.map((item)=>(
+                <RecentNewsCard key={item.id} title={item.title} url={item.url} puslishedDate={item.puslishedDate} />
+              ))}
+            </div>
+          </div>
         </div>
+      </div>
+      <div onClick={scrollToTop} className="cursor-pointer inline-block absolute left-1/2 -translate-x-1/2 bottom-3">
+        <Image src={doubleUpArrow} alt="icon" />
       </div>
     </footer>
   )
