@@ -8,7 +8,7 @@ const FaqBody = () => {
 const [activeTab, setActiveTab] = useState(faqData[0].tabKey)
 
   return (
-    <section className="pt-[105px] pb-[96px]">
+    <section className="pt-[105px] pb-[35px]">
       <div className="container">
         <Heading className='text-center font-montserrat font-bold text-[34px] text-black_2' variant='h2' text="Frequently Asked Questions" />
         <Paragraph className="text-center max-w-[775px] mx-auto mt-3" text="Nullam vestibulum, justo vitae varius interdum, nibh turpis eleifend tellus, sit amet porttitor orci erat vitae odio. Duis sapien metus, egestas rhoncus metus id, dignissim malesuada eros" />
