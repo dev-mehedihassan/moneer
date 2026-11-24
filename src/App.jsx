@@ -4,6 +4,7 @@ import About from "./components/About";
 import RootLayout from "./components/layouts/RootLayout";
 import Error from "./components/layouts/Error";
 import FAQIndex from "./components/pages/faq/FAQIndex";
+import ContactIndex from "./components/pages/contact-us/Index";
 
 
 const routes = createRoutesFromElements(
@@ -12,6 +13,7 @@ const routes = createRoutesFromElements(
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/faq" element={<FAQIndex />} />
+      <Route path="/contact-us" element={<ContactIndex />} />
     </Route>
     <Route path="*" element={<Error />} />
   </>
