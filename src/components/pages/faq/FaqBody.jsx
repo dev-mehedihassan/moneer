@@ -5,6 +5,7 @@ import { faqData } from '../../../dummyData/faqData'
 import { FaBars } from 'react-icons/fa'
 import { IoClose } from 'react-icons/io5'
 import { useRef } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 
 const FaqBody = () => {
 
@@ -66,13 +67,24 @@ useEffect(()=>{
                 ))}
             </div>
         </div>
-        <div className="mt-8 md:mt-14 grid grid-cols-1 md:grid-cols-2 gap-y-9 gap-x-10">
-            {faqData.find((item)=> item.tabKey === activeTab)?.tabContent.map((contentItem,contentIndex)=>(
-                <div key={contentIndex}>
-                <Heading className="text-base font-bold font-montserrat text-black_2" text={contentItem.title} variant="h4" />
-                <Paragraph className="mt-3" text={contentItem.content} />
-                </div>
-            ))}
+        <div className="mt-8 md:mt-14">
+            <AnimatePresence mode='wait'>
+                <motion.div 
+                    key={activeTab}
+                    initial={{ opacity: 0, y: 12}}
+                    animate={{ opacity: 1, y: 0}}
+                    exit={{ opacity: 0, y: -12}} 
+                    transition={{ duration: 0.25, ease: 'easeInOut'}}
+                    className='grid grid-cols-1 md:grid-cols-2 gap-y-9 gap-x-10'
+                >
+                    {faqData.find((item)=> item.tabKey === activeTab)?.tabContent.map((contentItem,contentIndex)=>(
+                        <div key={contentIndex}>
+                            <Heading className="text-base font-bold font-montserrat text-black_2" text={contentItem.title} variant="h4" />
+                            <Paragraph className="mt-3" text={contentItem.content} />
+                        </div>
+                    ))}
+                </motion.div>
+            </AnimatePresence>
         </div>
       </div>
     </section>
