@@ -4,7 +4,7 @@ import BreadCrumb from '../../common/BreadCrumb'
 const FAQIndex = () => {
   return (
     <>
-        <BreadCrumb />
+        <BreadCrumb title="FAQ" routeName="FAQ" parentRouteName='Home' />
     </>
   )
 }
