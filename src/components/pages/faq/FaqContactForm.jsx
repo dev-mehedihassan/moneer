@@ -28,7 +28,7 @@ const handleChange = (e) => {
     }))
 }
 
-const inputStyle = `border border-[#C8C8C8] border-opacity-[73%] bg-[#F5F5FF] bg-opacity-[53%] rounded-[24px] py-2.5 px-4 font-normal font-lato text-base placeholder:text-gray_2 placeholder:font-lato`
+const inputStyle = `border border-[#C8C8C8] border-opacity-[73%] bg-[#F5F5FF] bg-opacity-[53%] rounded-[24px] py-2.5 px-4 font-normal font-lato text-base placeholder:text-gray_2 placeholder:font-lato wifull`
 
 const handleSubmit = (e) => {
   e.preventDefault()
@@ -65,15 +65,15 @@ const handleSubmit = (e) => {
 }
 
   return (
-    <section className="pt-[105px] pb-[180px] relative">
-        <Image src={formShape} className='absolute right-0 top-1/2 -translate-y-1/2 max-w-[660px] max-h-[676px]' />
+    <section className="pt-14 lg:pt-[105px] pb-16 md:pb-20 3xl:pb-[180px] relative">
+        <Image src={formShape} className='hidden lg:inline absolute right-0 top-1/2 -translate-y-1/2 max-w-[400px] 2xl:max-w-[660px] max-h-[676px]' />
         <div className="container">
-            <div className="grid grid-cols-[535px_auto] gap-x-[83px]">
+            <div className="grid grid-cols-1 lg:grid-cols-[535px_auto] gap-x-[83px]">
                 <div>
-                    <Heading variant="h3" text="Need More Answers?" className="text-blue_1 text-[42px] font-montserrat font-bold" />
+                    <Heading variant="h3" text="Need More Answers?" className="text-blue_1 text-2xl sm:text-3xl md:text-[42px] font-montserrat font-bold" />
                     <form onSubmit={handleSubmit}>
                         <textarea onChange={handleChange} value={formData.message} name='message' placeholder="Your Message" className="mt-4 w-full border border-[#C8C8C8] border-opacity-[73%] bg-[#F5F5FF] bg-opacity-[53%] rounded-[24px] py-2.5 px-4 font-normal font-lato text-base placeholder:text-gray_2 placeholder:font-lato min-h-[219px] resize-none" />
-                        <div className="mt-4 grid grid-cols-2 gap-x-2.5">
+                        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-x-2.5 gap-y-4">
                             <div>
                                 <Input value={formData.name} onChange={handleChange} name="name" type="text" placeholder="Your Name" className={inputStyle} />
                                 {error.name && 

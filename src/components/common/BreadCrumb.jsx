@@ -5,10 +5,10 @@ import { GoChevronRight } from 'react-icons/go'
 
 const BreadCrumb = ({title, routeName, parentRouteName="home", parentRouteUrl="/", bg =breadcrumbBg }) => {
   return (
-    <section style={{backgroundImage: `url(${bg})`}} className='bg-cover bg-center bg-no-repeat pt-[172px] pb-[125px]' >
+    <section style={{backgroundImage: `url(${bg})`}} className='bg-cover bg-center bg-no-repeat pt-28 xl:pt-[172px] pb-10 xl:pb-[125px]' >
       <div className="container">
         <h3 className='text-white text-center font-montserrat text-[34px] font-bold leading-12'>{title}</h3>
-        <div className='mt-10 flex justify-center items-center gap-x-2'>
+        <div className='mt-3 sm:mt-7 xl:mt-10 flex justify-center items-center gap-x-2'>
           <Link to={parentRouteUrl} className='inline-block mb-1'>
             <span className='text-white text-sm font-lato font-bold capitalize'>{parentRouteName}</span>
           </Link>
