@@ -5,6 +5,7 @@ import Heading from '../ui/Heading'
 import { Link } from 'react-router-dom'
 import { FaEnvelope, FaMapMarkerAlt, FaChevronRight } from 'react-icons/fa'
 import { IoMdCall } from 'react-icons/io'
+import { TbMessageDots } from "react-icons/tb";
 import { footerUrl, recentNews } from '../../dummyData/footerUrl'
 import RecentNewsCard from '../common/RecentNewsCard'
 import doubleUpArrow from '../../assets/svg/double-up-arrow.svg'
@@ -19,7 +20,10 @@ const scrollToTop = () => {
 }
 
   return (
-    <footer className="py-[110px] bg-linear-(--footer-linearbg)">
+    <footer className="py-[110px] bg-linear-(--footer-linearbg) relative">
+      <button type="button" className="w-11 h-11 rounded-full bg-linear-to-r from-[#FF357D] to-[#FF6F33] outline-[10px] outline-[#ff5851]/67 -outline-offset-[5px] text-white flex items-center justify-center shadow-lg cursor-pointer absolute top-9 left-[240px] xl:left-10">
+        <TbMessageDots className='text-xl' />
+      </button>
       <div className="container">
         <div className="flex justify-between">
           <div className="w-[285px]">
