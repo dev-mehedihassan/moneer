@@ -64,7 +64,7 @@ const handleChange = (e) => {
     }))
 }
 
-const inputStyle = `border border-[#C8C8C8] border-opacity-[73%] bg-[#F5F5FF] bg-opacity-[53%] rounded-[24px] py-2.5 px-4 font-normal font-lato text-base placeholder:text-gray_2 placeholder:font-lato w-full`
+const inputStyle = `border border-[#C8C8C8] border-opacity-[73%] bg-[#F5F5FF] bg-opacity-[53%] rounded-[24px] py-2.5 px-4 font-normal font-lato text-base placeholder:text-gray_2 placeholder:font-lato w-full outline-none`
 
 const handleSubmit = (e) => {
   e.preventDefault()
@@ -148,7 +148,7 @@ const handleSubmit = (e) => {
                                     <p className='mt-1.5 border-l-2 border-rose-500 pl-2.5 font-lato text-xs font-medium tracking-wide text-rose-600'>{error.phone}</p>
                                 }
                         </div>
-                        <textarea onChange={handleChange} value={formData.brief} name='brief' placeholder="Tell About Your Project" className="w-full border border-[#C8C8C8] border-opacity-[73%] bg-[#F5F5FF] bg-opacity-[53%] rounded-[24px] py-2.5 px-4 font-normal font-lato text-base placeholder:text-gray_2 placeholder:font-lato min-h-[219px] resize-none col-span-2" />
+                        <textarea onChange={handleChange} value={formData.brief} name='brief' placeholder="Tell About Your Project" className="w-full border border-[#C8C8C8] border-opacity-[73%] bg-[#F5F5FF] bg-opacity-[53%] rounded-[24px] py-2.5 px-4 font-normal font-lato text-base placeholder:text-gray_2 placeholder:font-lato min-h-[219px] resize-none col-span-2 outline-none" />
                         <div className='col-span-2 flex justify-center'>
                             <button type="submit" value="Send" className="bg-linear-to-r from-[#FF357D] to-[#FF6F33] text-white font-montserrat text-sm font-semibold py-4 px-21 inline-block rounded-[28px] cursor-pointer">
                             Send

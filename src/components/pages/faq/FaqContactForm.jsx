@@ -28,7 +28,7 @@ const handleChange = (e) => {
     }))
 }
 
-const inputStyle = `border border-[#C8C8C8] border-opacity-[73%] bg-[#F5F5FF] bg-opacity-[53%] rounded-[24px] py-2.5 px-4 font-normal font-lato text-base placeholder:text-gray_2 placeholder:font-lato w-full`
+const inputStyle = `border border-[#C8C8C8] border-opacity-[73%] bg-[#F5F5FF] bg-opacity-[53%] rounded-[24px] py-2.5 px-4 font-normal font-lato text-base placeholder:text-gray_2 placeholder:font-lato w-full outline-none`
 
 const handleSubmit = (e) => {
   e.preventDefault()
@@ -72,7 +72,7 @@ const handleSubmit = (e) => {
                 <div>
                     <Heading variant="h3" text="Need More Answers?" className="text-blue_1 text-2xl sm:text-3xl md:text-[42px] font-montserrat font-bold" />
                     <form onSubmit={handleSubmit}>
-                        <textarea onChange={handleChange} value={formData.message} name='message' placeholder="Your Message" className="mt-4 w-full border border-[#C8C8C8] border-opacity-[73%] bg-[#F5F5FF] bg-opacity-[53%] rounded-[24px] py-2.5 px-4 font-normal font-lato text-base placeholder:text-gray_2 placeholder:font-lato min-h-[219px] resize-none" />
+                        <textarea onChange={handleChange} value={formData.message} name='message' placeholder="Your Message" className="mt-4 w-full border border-[#C8C8C8] border-opacity-[73%] bg-[#F5F5FF] bg-opacity-[53%] rounded-[24px] py-2.5 px-4 font-normal font-lato text-base placeholder:text-gray_2 placeholder:font-lato min-h-[219px] resize-none outline-none" />
                         <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-x-2.5 gap-y-4">
                             <div>
                                 <Input value={formData.name} onChange={handleChange} name="name" type="text" placeholder="Your Name" className={inputStyle} />
