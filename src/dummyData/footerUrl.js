@@ -2,37 +2,37 @@ export const footerUrl = [
     {
         id: 1,
         text: "about us",
-        url: "#",
+        url: "/about",
         isNew: false
     },
     {
         id: 2,
         text: "our services",
-        url: "#",
+        url: "/services",
         isNew: false
     },
     {
         id: 3,
         text: "prices plans",
-        url: "#",
+        url: "/prices-plan",
         isNew: true
     },
     {
         id: 4,
         text: "blog",
-        url: "#",
+        url: "/blog",
         isNew: false
     },
     {
         id: 5,
         text: "FAQ",
-        url: "#",
+        url: "/faq",
         isNew: false
     },
     {
         id: 6,
         text: "contact us",
-        url: "#",
+        url: "/contact-us",
         isNew: false
     }
 ]

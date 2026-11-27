@@ -20,13 +20,13 @@ const scrollToTop = () => {
 }
 
   return (
-    <footer className="py-[110px] bg-linear-(--footer-linearbg) relative">
-      <button type="button" className="w-11 h-11 rounded-full bg-linear-to-r from-[#FF357D] to-[#FF6F33] outline-[10px] outline-[#ff5851]/67 -outline-offset-[5px] text-white flex items-center justify-center shadow-lg cursor-pointer absolute top-9 left-[240px] xl:left-10">
+    <footer className="py-16 lg:py-20 xl:py-24 2xl:py-[110px] bg-linear-(--footer-linearbg) relative">
+      <button type="button" className="hidden lg:block w-11 h-11 rounded-full bg-linear-to-r from-[#FF357D] to-[#FF6F33] outline-[10px] outline-[#ff5851]/67 -outline-offset-[5px] text-white flex items-center justify-center shadow-lg cursor-pointer absolute top-9 left-[240px] xl:left-10">
         <TbMessageDots className='text-xl' />
       </button>
       <div className="container">
-        <div className="flex justify-between">
-          <div className="w-[285px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[285px_auto_360px] xl:grid-cols-[285px_auto_440px] gap-y-10 max-md:gap-x-10 max-lg:gap-x-20 justify-between">
+          <div className="">
             <Image src={logo} alt='logo' />
             <p className='mt-6 text-base font-lato font-normal text-white leading-7'>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin commodo</p>
             <div className='mt-5 grid grid-cols-1 gap-y-4'>
@@ -71,9 +71,9 @@ const scrollToTop = () => {
               ))}
             </div>
           </div>
-          <div className="w-[440px]">
+          <div className="sm:col-span-2 lg:col-span-1">
             <Heading variant="h3" text="Recent News" className="mt-2 font-montserrat font-bold leading-normal text-white text-2xl" />
-            <div className="mt-[22px] grid grid-cols-1 gap-y-[14px]">
+            <div className="mt-[22px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-y-[14px] gap-x-10">
               {recentNews.map((item)=>(
                 <RecentNewsCard key={item.id} title={item.title} url={item.url} puslishedDate={item.puslishedDate} />
               ))}
