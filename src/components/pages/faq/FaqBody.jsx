@@ -46,7 +46,7 @@ useEffect(()=>{
             ))}
         </div>
         {/* Mobile Tab */}
-        <div ref={dropdownRef} className="mt-10 md:hidden flex gap-x-2 items-center justify-start">
+        <div ref={dropdownRef} className="mt-10 md:hidden flex gap-x-2 items-center justify-start relative">
             <button className='w-6 flex' onClick={() => setDropdown(!dropdown)}>
                 {dropdown ?
                     <IoClose className='text-black text-2xl' />
@@ -55,7 +55,7 @@ useEffect(()=>{
                 }
             </button>
             <span onClick={() => setDropdown(!dropdown)} className='text-lg font-montserrat font-semibold capitalize cursor-pointer hover:text-blue_1 transition-all duration-300'>{activeTabLabel}</span>
-            <div className={`w-[200px] bg-white shadow-2xl absolute -bottom-10 translate-y-full left-5 grid grid-cols-1 transition-all duration-300 ${dropdown ? 'opacity-100 visible -bottom-10' : 'opacity-0 invisible -bottom-13'}`}>
+            <div className={`w-[200px] bg-white shadow-2xl absolute top-full left-0 z-20 grid grid-cols-1 transition-all duration-300 ${dropdown ? 'opacity-100 visible mt-2' : 'opacity-0 invisible mt-0'}`}>
                 {faqData.map((item,index)=>(
                     <button onClick={() => {
                         setActiveTab(item.tabKey)

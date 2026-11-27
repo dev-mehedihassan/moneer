@@ -21,8 +21,12 @@ const scrollToTop = () => {
 
   return (
     <footer className="py-16 lg:py-20 xl:py-24 2xl:py-[110px] bg-linear-(--footer-linearbg) relative">
-      <button type="button" className="hidden lg:block w-11 h-11 rounded-full bg-linear-to-r from-[#FF357D] to-[#FF6F33] outline-[10px] outline-[#ff5851]/67 -outline-offset-[5px] text-white flex items-center justify-center shadow-lg cursor-pointer absolute top-9 left-[240px] xl:left-10">
-        <TbMessageDots className='text-xl' />
+      <button
+      type="button"
+      aria-label="Open messages"
+      className="fixed bottom-5 right-5 lg:absolute lg:bottom-auto lg:top-8 lg:left-6 xl:left-8 2xl:left-10 z-30 size-11 rounded-full bg-linear-to-r from-[#FF357D] to-[#FF6F33] outline-[10px] outline-[#ff5851]/67 -outline-offset-[5px] text-white inline-flex items-center justify-center shadow-lg cursor-pointer transition-transform duration-200 hover:scale-105"
+      >
+        <TbMessageDots className="text-xl" />
       </button>
       <div className="container">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[285px_auto_360px] xl:grid-cols-[285px_auto_440px] gap-y-10 max-md:gap-x-10 max-lg:gap-x-20 justify-between">

@@ -66,7 +66,7 @@ const handleSubmit = (e) => {
 
   return (
     <section className="pt-14 lg:pt-[105px] pb-16 md:pb-20 3xl:pb-[180px] relative">
-        <Image src={formShape} className='hidden lg:inline absolute right-0 top-1/2 -translate-y-1/2 max-w-[400px] 2xl:max-w-[660px] max-h-[676px]' />
+        <Image src={formShape} className='hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 lg:max-w-[380px] xl:max-w-[500px] 2xl:max-w-[640px] w-full h-auto' />
         <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-[535px_auto] gap-x-[83px]">
                 <div>
